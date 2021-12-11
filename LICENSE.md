@@ -1,0 +1,1 @@
+You are permitted and prohibited to do the following things:
