@@ -1,0 +1,21 @@
+[
+    {
+        "condition": "minecraft:value_check",
+        "value": {
+            "type": "uniform",
+            "min": 0,
+            "max": 1000000
+        },
+        "range": {
+            "min": 0,
+            "max": {
+                "type": "score",
+                "target": {
+                    "type": "fixed",
+                    "name": "#chance"
+                },
+                "score": "pp.random"
+            }
+        }
+    }
+]
