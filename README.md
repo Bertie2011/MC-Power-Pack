@@ -8,6 +8,7 @@ Power Pack is a Minecraft Data Pack containing several tools and APIs, allowing 
   - [Crediting your data pack](#crediting-your-data-pack)
   - [Run load before tick](#run-load-before-tick)
   - [Random generator](#random-generator)
+  - [NBT Lookup](#nbt-lookup)
 
 ## Load messages
 The `/reload` command does not notify the executer when the reload finished. The `/function reload` command wraps `/reload` in nicer start and end messages.
@@ -27,3 +28,6 @@ You can run a command with a certain chance using `execute if predicate powerpac
 To generate a random number, set both `#min pp.random` (set even if it's 0, inclusive) and `#max pp.random` (inclusive). Then call `function powerpack:random`. The resulting random number can be found in `#out pp.random`.
 
 For more information, head over to the related [wiki](./wiki/Random.md) file.
+
+## NBT Lookup
+Selecting an NBT value based on a variable is very difficult to do, sometimes even deemed impossible. Power Pack provides a way to retrieve and edit NBT values based on a scoreboard value. For more information, head over to the related [wiki](./wiki/Lookup.md) file.

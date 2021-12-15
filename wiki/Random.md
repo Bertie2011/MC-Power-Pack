@@ -6,7 +6,7 @@ The current implementation selects a random number by repeatedly taking the top 
 This method is not truely random, because of shortcomings in the internal Minecraft algorithms and that each member in a final range of 3 has a lower chance than a member that's in a final range of 2.
 
 ## Alternative Solutions
-solution|disadvantages
+Solution|Disadvantages
 -|-
 Random entity target selector | Obviously this gets laggy quickly if you want a random number between 0 and 1000, resulting in 1000 entities. This is less of an issue with markers, but still not good enough.
 Clock based | In this method a number is simply incremented on the scoreboard every tick.Although this might seem random if the number is retrieved at irregular intervals, the illusion falls apart if it's retrieved every tick or multiple times a tick.

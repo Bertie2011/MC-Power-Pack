@@ -1,0 +1,1 @@
+data modify storage powerpack:data lookup.stack[-1].node.data set from storage powerpack:data lookup.arg
