@@ -16,8 +16,6 @@ The current implemenation uses an array that is being iterated over. To select a
 
 Solution|Disadvantages
 -|-
-Marker Entities | For each player, you could spawn a marker and teleport it to the player at all times. This creates a small amount of entity lag, which is best to be prevented.
 Naive implementation | A quick implemenation might just delete/move the first item of an array. Instead the last item is moved, since in most programming languages this is faster when it comes to arrays. Also, when the element is found, the rest is copied over to the output with a single command instead of one by one.
-Mapping IDs to Coordinates | Although a datapack like [EntityDB](https://github.com/hqics/entitydb) this allows for instant lookups, it does create the overhead of an entire new dimension with tile entities that need to be loaded.
 Array Filters | Some datapacks like [PlayerDB](https://github.com/rx-modules/PlayerDB) claim to be faster, but use array filters (`array[{nbtKey:"value"}]`) which cause the entire array to be iterated. So looking at performance behind the minecraft commands, its not faster than just simply iterating the array once.
 Binary Search Tree | Another attempt for improved performance is the Binary Search Tree. Although theoretically it could have better performance for a large number of items, it has worse performance for smaller items due to its complexity. This caused development of this data structure to be halted, but the draft is still available [here](../draft/binary%20tree%20lookup//todo.md).

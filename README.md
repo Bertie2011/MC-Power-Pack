@@ -8,7 +8,9 @@ Power Pack is a Minecraft Data Pack containing several tools and APIs, allowing 
   - [Crediting your data pack](#crediting-your-data-pack)
   - [Run load before tick](#run-load-before-tick)
   - [Random generator](#random-generator)
+  - [Player Ids](#player-ids)
   - [NBT Lookup](#nbt-lookup)
+  - [Player NBT](#player-nbt)
 
 ## Load messages
 The `/reload` command does not notify the executer when the reload finished. The `/function reload` command wraps `/reload` in nicer start and end messages.
@@ -29,5 +31,11 @@ To generate a random number, set both `#min pp.random` (set even if it's 0, incl
 
 For more information, head over to the related [wiki](./wiki/Random.md) file.
 
+## Player Ids
+Each player gets a unique id in the `pp.pid` objective. The ids can be used to for example check for ownership with `execute if score @s pp.pid = @e[...] my_pack.owned_by` or remember a player without giving them a tag and later finding them with `execute as @a if score @s pp.pid = #that_one_player my_pack.tmp`.
+
 ## NBT Lookup
 Selecting an NBT value based on a variable is very difficult to do, sometimes even deemed impossible. Power Pack provides a way to retrieve and edit NBT values based on a scoreboard value. For more information, head over to the related [wiki](./wiki/Lookup.md) file.
+
+## Player NBT
+Power pack provides a way to store player specific NBT data. It uses both the Player Id and NBT Lookup components to provide a simplified API and built-in storage for the data. For more information, head over to the related [wiki](./wiki/PlayerNBT.md) file.
