@@ -5,7 +5,7 @@ Power Pack is a Minecraft Data Pack containing several tools and APIs, allowing 
 - [Power Pack](#power-pack)
   - [Contents](#contents)
   - [Load messages](#load-messages)
-  - [Crediting your data pack](#crediting-your-data-pack)
+  - [Data Pack Meta Data](#data-pack-meta-data)
   - [Run load before tick](#run-load-before-tick)
   - [Random generator](#random-generator)
   - [Player Ids](#player-ids)
@@ -15,11 +15,12 @@ Power Pack is a Minecraft Data Pack containing several tools and APIs, allowing 
 ## Load messages
 The `/reload` command does not notify the executer when the reload finished. The `/function reload` command wraps `/reload` in nicer start and end messages.
 
-## Crediting your data pack
-Sending messages on load to everyone can be considered spam and making custom achievements for your data packs can be bothersome. With Power Pack, running `/trigger pp.datapacks` will list all enabled data packs. To register your data pack, put the following in your load function:
+## Data Pack Meta Data
+You can attach meta data to your data pack using the following command:
 ```
-data modify storage powerpack:data datapacks append value {creditsText:'<JSON TEXT>'}
+data modify storage powerpack:data datapacks append value {version:1,creditsText:'<JSON TEXT>'}
 ``` 
+Running `/trigger pp.datapacks` will list all enabled data packs using the `creditsText`. Also if the wrong version of Power Pack is installed, all users will be notified.
 
 ## Run load before tick
 The function tag `#minecraft:tick` actually runs before `#minecraft:load` in the same data pack, which can cause some trouble. By using `#powerpack:load` and `#powerpack:tick` it's guaranteed that they will run in the right order.
